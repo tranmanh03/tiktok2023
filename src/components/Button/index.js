@@ -16,6 +16,7 @@ function Button({
   small,
   large,
   children,
+  className,
   onClick,
   ...passProps
 }) {
@@ -49,13 +50,14 @@ function Button({
     disable,
     rounded,
     small,
+    [className]: className,
     large,
   });
 
   return (
     <Comp className={classes} {...props}>
       {icon && <span className={cx('icon')}>{icon}</span>}
-      <span>{children}</span>
+      <span className={cx('title')}>{children}</span>
     </Comp>
   );
 }
