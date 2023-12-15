@@ -1,0 +1,93 @@
+.wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  min-width: 106px;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid transparent;
+  user-select: none;
+
+  + .wrapper {
+    margin-left: 16px;
+  }
+
+  &.disable {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+}
+
+.icon {
+  margin-right: 12px;
+}
+
+//Button types
+.rounded {
+  min-width: 90px;
+  height: 32px;
+  padding: 0 8px;
+  border-radius: 52px;
+  color: rgba(22, 24, 35, 0.75);
+  border: 1px solid rgba(22, 24, 35, 0.12);
+  background: none rgb(255, 255, 255);
+  font-size: 1.4rem;
+
+  &:hover {
+    border-color: rgba(22, 24, 35, 0.2);
+    background-color: rgb(255, 255, 255);
+  }
+}
+
+.primary {
+  color: var(--white);
+  background-color: rgb(254, 44, 85);
+  border-color: var(--primary);
+
+  &:hover {
+    border-color: var(--primary);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), rgb(254, 44, 85);
+  }
+}
+
+.outline {
+  color: var(--primary);
+  border-color: currentColor;
+
+  &:hover {
+    border-color: currentColor;
+    background-color: #fe2c5514;
+  }
+}
+
+.upload {
+  min-width: 110px;
+  height: 36px;
+  padding: 0px 16px;
+  border-radius: 2px;
+  border: 1px solid rgba(22, 24, 35, 0.12);
+  font-weight: 500;
+  font-size: 1.8rem;
+
+  &:hover {
+    background-color: rgba(22, 24, 35, 0.03);
+  }
+}
+
+//Button sizes
+.small {
+  min-height: 38px;
+  min-width: 96px;
+  padding: 8px;
+}
+
+.large {
+  min-width: 168px;
+  min-height: 48px;
+  padding: 6px 8px;
+}

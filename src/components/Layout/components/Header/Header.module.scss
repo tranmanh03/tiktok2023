@@ -22,10 +22,14 @@
   display: flex;
 }
 
+.search,
+.searchResult {
+  width: 500px;
+}
+
 .search {
   position: relative;
   min-width: 200px;
-  width: 500px;
   height: 48px;
   padding-left: 16px;
   background: rgba(22, 24, 35, 0.06);
@@ -71,6 +75,13 @@
       color: var(--black);
     }
   }
+}
+
+.search-title {
+  padding: 5px 12px;
+  font-size: 1.4;
+  font-weight: 500;
+  color: rgba(22, 24, 35, 0.5);
 }
 
 .clear,
