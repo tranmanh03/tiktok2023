@@ -1,5 +1,5 @@
 .content {
-  width: 270px;
+  max-width: 270px;
 
   .menu-item {
     margin-left: 0;
@@ -10,13 +10,43 @@
   padding-bottom: 8px;
 }
 
+//Menu items
 .menu-item {
   width: 100%;
   padding: 10px 8px 10px 16px;
   border-radius: 0;
+  line-height: 2rem;
   font-weight: 500;
   justify-content: flex-start;
+
+  &.separate {
+    border-top: 1px solid rgba(22, 24, 35, 0.12);
+  }
+
   &:hover {
     background: rgba(22, 24, 35, 0.03);
   }
+}
+
+//Header
+.header {
+  position: relative;
+  height: 50px;
+  margin-top: -8px;
+}
+
+.back-btn {
+  width: 50px;
+  height: 100%;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.header-title {
+  position: absolute;
+  font-size: 1.6rem;
+  font-weight: 600;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

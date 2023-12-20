@@ -31,7 +31,7 @@
 .search {
   position: relative;
   min-width: 200px;
-  height: 48px;
+  height: 46px;
   padding-left: 16px;
   background: rgba(22, 24, 35, 0.06);
   border-radius: var(--search-border-radius);
@@ -44,7 +44,7 @@
     flex: 1;
     height: 100%;
     background-color: transparent;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: var(--black);
     caret-color: var(--primary);
   }
@@ -80,7 +80,7 @@
 
 .search-title {
   padding: 5px 12px;
-  font-size: 1.4;
+  font-size: 1.4rem;
   font-weight: 500;
   color: rgba(22, 24, 35, 0.5);
 }
@@ -117,6 +117,7 @@
   }
 }
 
+//Actions
 .actions {
   display: flex;
   align-items: center;
@@ -133,4 +134,21 @@
     width: 20px;
     height: 20px;
   }
+}
+
+.message-btn,
+.mailbox-btn {
+  padding: 3px 3px 0px;
+  margin-left: 20px;
+  font-size: 2.2rem;
+  color: rgb(22, 24, 35);
+  background-color: transparent;
+}
+
+.avatar-user {
+  margin-left: 24px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
 }
