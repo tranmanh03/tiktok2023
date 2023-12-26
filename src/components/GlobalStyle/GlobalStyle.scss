@@ -23,7 +23,7 @@ html {
 }
 
 body {
-  font-family: 'IBM Plex Sans', TikTokFont, Arial, Tahoma, PingFangSC, sans-serif;
+  font-family: 'IBM Plex Sans', sans-serif;
   font-size: 1.6rem;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
@@ -60,29 +60,29 @@ a {
 }
 
 // Fonts style
-// @font-face {
-//   font-family: TikTokFont;
-//   src: url('/assets/fonts/zYX9KVElMYYaJe8bpLHnCwDKjQ76AI5sdO_q.woff2');
-//   font-weight: 600;
-// }
+@font-face {
+  font-family: TikTokFont;
+  src: url('/assets/fonts/TikTokFont-Regular.woff2');
+  font-weight: 400;
+}
 
-// @font-face {
-//   font-family: TikTokFont;
-//   src: url('/assets/fonts/zYX9KVElMYYaJe8bpLHnCwDKjQ76AIFsdA.woff2');
-//   font-weight: 600;
-// }
+@font-face {
+  font-family: TikTokFont;
+  src: url('/assets/fonts/TikTokFont-Semibold.woff2');
+  font-weight: 600;
+}
 
-// @font-face {
-//   font-family: TikTokFont;
-//   src: url('/assets/fonts/zYX9KVElMYYaJe8bpLHnCwDKjWr7AI5sdO_q.woff2');
-//   font-weight: 700;
-// }
+@font-face {
+  font-family: TikTokFont;
+  src: url('/assets/fonts/TikTokFont-Bold.woff2');
+  font-weight: 700;
+}
 
-// @font-face {
-//   font-family: TikTokFont;
-//   src: url('/assets/fonts/zYXgKVElMYYaJe8bpLHnCwDKhd_eFb5N.woff2');
-//   font-weight: 700;
-// }
+@font-face {
+  font-family: TikTokFont;
+  src: url('/assets/fonts/TikTokDisplayFont-Bold.woff2');
+  font-weight: 700;
+}
 
 //Custom tippy tooltip
 body {

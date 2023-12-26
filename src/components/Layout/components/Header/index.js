@@ -14,22 +14,22 @@ import Tippy from '@tippyjs/react';
 import HeadlessTippy from '@tippyjs/react/headless';
 import 'tippy.js/dist/tippy.css';
 
-import Menu from '~/components/Popper/Menu';
-import Button from '~/components/Button';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
+import Button from '~/components/Button';
 import styles from './Header.module.scss';
-import images from '~/assets/images';
+import Menu from '~/components/Popper/Menu';
 import AccountItem from '~/components/AccountItem';
+import images from '~/assets/images';
 import {
   faBookmark,
   faCircleQuestion,
   faKeyboard,
   faLightbulb,
-  faMessage,
   faMoon,
-  faPaperPlane,
   faUser,
 } from '@fortawesome/free-regular-svg-icons';
+import { MailboxIcon, MessageIcon, SearchIcon } from '~/components/Icons';
+import Image from '~/components/Image';
 
 const cx = classNames.bind(styles);
 
@@ -126,7 +126,7 @@ function Header() {
             </button>
             <FontAwesomeIcon className={cx('loading')} icon={faSpinner} />
             <button className={cx('search-btn')}>
-              <FontAwesomeIcon icon={faMagnifyingGlass} />
+              <SearchIcon />
             </button>
           </div>
         </HeadlessTippy>
@@ -140,13 +140,13 @@ function Header() {
 
               <Tippy delay={[0, 200]} content="Tin nhắn" placement="bottom">
                 <button className={cx('message-btn')}>
-                  <FontAwesomeIcon icon={faPaperPlane} />
+                  <MessageIcon />
                 </button>
               </Tippy>
 
               <Tippy delay={[0, 200]} content="Hộp thư" placement="bottom">
                 <button className={cx('mailbox-btn')}>
-                  <FontAwesomeIcon icon={faMessage} />
+                  <MailboxIcon />
                 </button>
               </Tippy>
             </>
@@ -160,7 +160,7 @@ function Header() {
           )}
           <Menu items={currentUser ? userMenu : MENU_ITEMS}>
             {currentUser ? (
-              <img
+              <Image
                 className={cx('avatar-user')}
                 src="https://lh3.googleusercontent.com/ogw/ANLem4bwM1qdqYhyoASXoIOeWeCKIxrUqLRkRHChRHEBwQ=s32-c-mo"
                 alt="tranduymanh"
