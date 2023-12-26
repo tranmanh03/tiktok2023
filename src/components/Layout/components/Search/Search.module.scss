@@ -1,0 +1,110 @@
+.search,
+.searchResult {
+  width: 500px;
+}
+
+.search {
+  position: relative;
+  min-width: 200px;
+  height: 46px;
+  padding-left: 16px;
+  background: rgba(22, 24, 35, 0.06);
+  border-radius: var(--search-border-radius);
+  display: flex;
+  align-items: center;
+  // z-index: 1;
+  border: 1px solid transparent;
+
+  input {
+    flex: 1;
+    height: 100%;
+    background-color: transparent;
+    font-size: 1.6rem;
+    color: var(--black);
+    caret-color: var(--primary);
+  }
+
+  input:not(:placeholder-shown) ~ .search-btn {
+    color: var(--black);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 52px;
+    background-color: rgba(22, 24, 35, 0.12);
+  }
+
+  &:focus-within {
+    border-color: rgba(22, 24, 35, 0.2);
+
+    .search-btn {
+      background-color: rgba(22, 24, 35, 0.06);
+      color: var(--black);
+    }
+  }
+
+  &:hover {
+    border-color: rgba(22, 24, 35, 0.2);
+
+    .search-btn {
+      background-color: rgba(22, 24, 35, 0.06);
+      color: var(--black);
+    }
+  }
+}
+
+.search-title {
+  padding: 5px 12px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: rgba(22, 24, 35, 0.5);
+}
+
+.clear,
+.loading {
+  position: absolute;
+  color: rgba(22, 24, 35, 0.34);
+  right: calc(52px + 16px);
+  top: 52%;
+  transform: translateY(-50%);
+  font-size: 1.6rem;
+}
+
+.loading {
+  animation: spinner 0.8s linear infinite;
+}
+
+@keyframes spinner {
+  from {
+    transform: translateY(-50%) rotate(0);
+  }
+  to {
+    transform: translateY(-50%) rotate(360deg);
+  }
+}
+.search-btn {
+  width: 52px;
+  height: 46px;
+  border-top-right-radius: var(--search-border-radius);
+  border-bottom-right-radius: var(--search-border-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: rgba(22, 24, 35, 0.34);
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgba(22, 24, 35, 0.06);
+    color: var(--black);
+  }
+
+  &:active {
+    background-color: rgba(22, 24, 35, 0.06);
+  }
+}
